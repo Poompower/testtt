@@ -1,0 +1,203 @@
+
+body {
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.scrollable-box {
+    width: 500px;
+    /* กำหนดความกว้างของกล่อง */
+    height: 200px;
+    /* กำหนดความสูงของกล่อง */
+    border: 1px solid #444444;
+    /* กำหนดกรอบให้กับกล่อง */
+    border-radius: 5px;
+    /* มุมกล่องมน */
+    padding: 10px;
+    /* ระยะห่างภายในกล่อง */
+    background-color: #1E1E1E;
+    /* สีพื้นหลังของโค้ด */
+    overflow-y: auto;
+    /* ทำให้สามารถเลื่อนแนวตั้งได้ */
+    overflow-x: auto;
+    /* ทำให้สามารถเลื่อนแนวนอนได้ถ้าจำเป็น */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    /* เงาให้กับกล่อง */
+}
+
+nav {
+    background-color: #8739f9;
+    /* สีพื้นหลังของ nav bar */
+    position: fixed;
+    /* ใช้ fixed เพื่อให้ nav bar คงที่ */
+    top: 0;
+    /* ติดอยู่ที่ด้านบน */
+    left: 0;
+    right: 0;
+    /* ขยายให้เต็มความกว้าง */
+    z-index: 1000;
+    /* ทำให้อยู่ด้านบนสุด */
+    padding: 10px 0;
+    /* ระยะห่างภายใน */
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    margin: 0 15px;
+    /* ระยะห่างระหว่างลิงก์ */
+    text-decoration: none;
+    /* ยกเลิกการขีดเส้นใต้ */
+}
+
+.default {
+    height: 500px;
+    background-color: #7a7a7a98;
+    border-radius: 45px;
+    box-shadow: 0px 5px 15px #8739f9;
+    display: flex;
+    margin: 40px auto;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;flex-wrap: wrap;    
+}
+.default h3{
+    font-size: medium;
+    color: #f7db5d;
+    stroke: #1E1E1E;
+    stroke-width: 100%;
+}
+.default h2{
+    font: 2em serif,bold;
+    color: #8739f9;
+}
+.default p{
+    color: white;
+}
+
+.github:hover {
+    background-color: #8739f9; /* เปลี่ยนสีเมื่อ hover */
+    transform: scale(1.1); /* ขยายขนาดเมื่อ hover */
+    cursor: pointer;
+    font: bold;
+    color: #ffffff;
+}
+.github::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    inset: 0.2em;
+    opacity: 0.7;
+    background: url("#");
+}
+
+.github {
+    all: unset;
+    --h: 333;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    padding: 0.5em 0.8em;
+    background-color: #0000;
+    background-image: linear-gradient(#0003, #0000);
+    color: hsl(var(--h) var(--s) var(--1) / 0.8);
+    text-shadow: 0.05em 0.05em 0 #fff3, -0.05em -0.05em 0 #0003;
+    border-radius: 0.25em;
+    box-shadow: inset 0 0.1em 0 0.06em hsl(var(--h) var(--s) var(--1) / 0.4), inset 0 0 0.1em 0.1em hsl(var(--h) var(--s) var(--1) / 0.4), 0 -0.4em 0 hsl(var(--h) var(--s) var(--1) / 0.4) inset, 0 1em 0.5em -0.25em #0004;
+    backdrop-filter: blur(0.05em);
+    position: relative;
+    display: inline-block;
+    /* ใช้ inline-block ทำให้ขนาดพื้นหลังพอดีกับข้อความ */
+    line-height: 1.2;
+    /* ปรับ line-height ถ้าต้องการ */
+}
+
+.github:active {
+    backdrop-filter: blur(0.02em);
+    box-shadow: inset 0.01em 0.06em hsl(var(--h) var(--s) var(--1) / 0.4), inset 0 0 01em 0.1em hsl(var(--h) var(--s) var(--1) / 0.4), 0 -0.4em 0 hsl(var(--h) var(--s) var(--1) / 0.4) inset, 0 0.7em 0.5em -0.25em #0004;
+    translate: 0 0.1em;
+    transform: scale(0.95);
+}
+.abt{
+    height: 540px;
+    background-color: #13131344;
+    border-radius: 45px;
+    box-shadow: 0px 5px 15px #37b9f1;
+    display: flex;
+    margin: 40px auto;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.aboutPictureProject, .default .botton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.eqp {
+    width: 100%; /* ทำให้ div เต็มพื้นที่ */
+}
+
+table {
+    width: 100%; /* ทำให้ตารางเต็มพื้นที่ของ div */
+    border-collapse: collapse; /* ทำให้ขอบของตารางไม่ห่างกัน */
+    background-color: #13131344;
+    box-shadow: 0px 5px 15px #37b9f1;
+}
+
+th, td {
+    border: 1px solid #ddd; /* เพิ่มขอบให้กับเซลล์ตาราง */
+    padding: 8px; /* เพิ่มระยะห่างในเซลล์ */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    height: 100px;
+}
+td img {
+    height: 100%; /* ทำให้ความสูงของรูปภาพเป็น 100% ของเซลล์ */
+    width: auto; /* ปรับความกว้างของรูปภาพให้เป็นอัตโนมัติเพื่อรักษาสัดส่วน */
+}
+th {
+    background-color: #f2f2f2; /* เปลี่ยนสีพื้นหลังของหัวตาราง */
+}
+.src {
+    height: 540px;
+    background-color: #13131344;
+    border-radius: 45px;
+    box-shadow: 0px 5px 15px #37b9f1;
+    display: flex;
+    margin: 40px auto;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.video{
+    height: 660px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.mem{
+    height: 540px;
+    background-color: #13131344;
+    border-radius: 45px;
+    box-shadow: 0px 5px 15px #37b9f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    
+}
+.member{
+    display: flex;
+    margin: 40px auto;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.m {
+    padding: 30px;
+}
